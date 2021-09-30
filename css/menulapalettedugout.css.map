@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AKAA,AAAA,GAAG,CAAC;EACF,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CACd",
+    "sources": [
+        "sass/menulapalettedugout.scss",
+        "sass/helpers/_variables.scss",
+        "sass/helpers/_mixins.scss",
+        "sass/helpers/_functions.scss",
+        "sass/Layout/_header.scss",
+        "sass/componants/_buttons.scss",
+        "sass/pages/_menulapalettedugout.scss",
+        "sass/Layout/_footer.scss"
+    ],
+    "names": [],
+    "file": "menulapalettedugout.css"
+}

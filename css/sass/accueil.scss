@@ -1,0 +1,20 @@
+
+@import"./helpers/variables" ;// variable should  declared before styles
+@import"./helpers/mixins"; // variable and mixins and function before all other import
+@import"./helpers/functions";
+// all the site depend from this 3 import should be first 
+
+
+@import"./Layout/header"; // ce nest pas le meme header que les autres pages a supprimer et le styler independament.
+
+
+@import "./componants/buttons";
+
+
+@import"./pages/accueil";
+
+
+@import"./Layout/footer";
+
+
+
