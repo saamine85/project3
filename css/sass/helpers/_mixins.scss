@@ -14,11 +14,6 @@
   }
 }
 
-@mixin laptop {
-  @media (min-width: 992px) {
-    @content;
-  }
-}
 @mixin large-screen {
   @media (min-width: 1200px) {
     @content;
@@ -33,7 +28,20 @@
   height: 100%;
   cursor: pointer;
 }
-
+// mixin prefixer
+@mixin prefixer($property ,$value ,$prefixes: ()){
+  @each $prefix  in $prefixes {
+    #{'-'+ $prefix + '-' + $property}:$value;
+  }
+  #{$property}:$value;
+}
+//mixin animation
+@mixin keyFrame($animationName) {
+  @keyframes #{$animationName} {
+    @content;
+  }
+  
+}
 
 
 

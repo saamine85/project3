@@ -1,0 +1,34 @@
+footer {
+  background-color: #383737;
+  padding-bottom: 25px;
+  img {
+    filter: invert(1);
+    padding: 0;
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    width: 25%;
+    height: 25%;
+  }
+  ul {
+    li {
+      margin-left: 20px;
+      padding-bottom: 5px;
+      i {
+        width: 4px;
+        font-size: 11px;
+        color: #fff;
+        padding: 0px;
+        margin-right: 15px;
+      }
+      a {
+        padding-left: 0px;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+}

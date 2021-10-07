@@ -12,25 +12,26 @@
 //     background-color: white;
 //   }
 // }
-.page{
-  aside{
-    h2 {
-  padding: 20px;
-  border: 2px solid rgb(17, 20, 224);
-  width: 200px;
-  position: relative;
-  text-align: center;
-  .overlay {
-    @include overlay;
-    &:hover{
-background-color: rgba(
-      red,
-      0.2
-    ); //or hex code rgba(#ff0404,.2) or rgba($maincolor,.2)
-    color: #fff;
-    }
-    
-  }
-}
-  }
-}
+
+// .page{
+//   aside{
+//     h2 {
+//   padding: 20px;
+//   border: 2px solid rgb(17, 20, 224);
+//   width: 200px;
+//   position: relative;
+//   text-align: center;
+//   .overlay {
+//     @include overlay;
+//     &:hover{
+// background-color: rgba(
+//       red,
+//       0.2
+//     ); //or hex code rgba(#ff0404,.2) or rgba($maincolor,.2)
+//     color: #fff;
+//     }
+
+//   }
+// }
+//   }
+// }
