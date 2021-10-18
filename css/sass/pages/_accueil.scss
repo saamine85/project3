@@ -35,3 +35,128 @@
 // }
 //   }
 // }
+
+/*start para*/
+.para {
+  display: flex;
+  justify-content: center;
+  background-color: $greyColor;
+  height: 50px;
+  align-items: center;
+  box-shadow: 1px 4px 5px 0px inset #b4b4b4;
+  span {
+    position: relative;
+    right: 35px;
+    top: -2px;
+    i {
+      font-size: 16px;
+    }
+  }
+  p {
+    position: relative;
+    right: 20px;
+    padding-left: 0px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+.hero {
+  background-color: rgb(245, 245, 245);
+  padding: 40px;
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+  }
+  p {
+    padding-top: 10px;
+    text-align: center;
+    color: #818181;
+    font-size: 16px;
+  }
+}
+/*end para*/
+/*start main*/
+.main {
+  aside {
+    margin: 60px 20px;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      // text-align: center;
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+      padding: 25px 0px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+      background-color: #f4f4f4;
+      border-radius: 20px;
+      box-shadow: 0px 3px 10px 1px #d4d4d4;
+      position: relative;
+      counter-increment: increment;
+      span {
+        margin-right: 20px;
+        margin-left: 25px;
+        i {
+          font-size: 20px;
+          color: #9c9c9c;
+          &:hover {
+            color: $primarycolor;
+          }
+        }
+      }
+      &::before {
+        content: counter(increment);
+        position: absolute;
+        color: #fff;
+        font-weight: normal;
+        font-size: 14px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $primarycolor;
+        left: -15px;
+      }
+    }
+  }
+  section {
+    padding-top: 40px;
+    margin-top: 40px;
+    background-color: $greyColor;
+    h2 {
+      font-size: 20px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    .card {
+      margin: 0 20px;
+      .cardImage {
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        img {
+          width: 350px;
+        }
+      }
+      .cardText {
+        h3 {
+        }
+        p {
+        }
+        span {
+
+          i {
+            
+          }
+        }
+      }
+    }
+  }
+}
+/*end main*/
