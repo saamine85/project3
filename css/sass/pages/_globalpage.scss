@@ -7,6 +7,17 @@ ul {
 }
 .shrik {
   font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  font-weight: 200px;
+  letter-spacing: 1px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .fa-heart {
+    font-size: 25px;
+    margin-right: 40px;
+  }
 }
 // .main {
 //   margin: 10px;

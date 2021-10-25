@@ -37,6 +37,11 @@
 // }
 
 /*start para*/
+header {
+  span {
+    display: none;
+  }
+}
 .para {
   display: flex;
   justify-content: center;
@@ -127,6 +132,7 @@
   }
   section {
     padding-top: 40px;
+    padding-bottom: 40px;
     margin-top: 40px;
     background-color: $greyColor;
     h2 {
@@ -135,24 +141,52 @@
       margin-bottom: 20px;
     }
     .card {
-      margin: 0 20px;
+      margin: 20px 20px;
+      border-radius: 20px 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.3);
+      position: relative;
+      &::after {
+        content: "Nouveau";
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 8px 14px;
+        background-color: $TertiaryColor;
+        font-weight: 700;
+        color: #2a7059ee;
+        border-radius: 3px;
+      }
+
       .cardImage {
-        display: flex;
-        flex-direction: row;
-        // justify-content: center;
         img {
-          width: 350px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0px 0px;
         }
       }
       .cardText {
-        h3 {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 10px;
+        .location {
+          padding-bottom: 20px;
+          // margin-right: 10px; // display: none;
+          // h3 {
+          // }
+          // p {
+          // }
         }
-        p {
-        }
-        span {
 
-          i {
-            
+        span {
+          font-size: 25px;
+          padding-right: 10px;
+          .fa-heart {
+            &:hover {
+              font-weight: 900;
+              cursor: pointer;
+              color: $primarycolor;
+            }
           }
         }
       }

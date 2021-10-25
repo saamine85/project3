@@ -7,11 +7,22 @@
 header {
   margin: 20px auto;
   text-align: center;
+  position: relative;
 }
 
 header img {
   width: 50%;
   height: 50%;
+}
+
+header span {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+}
+
+header span .fa-arrow-left {
+  font-size: 20px;
 }
 
 body {
@@ -25,6 +36,18 @@ ul {
 
 .shrik {
   font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  font-weight: 200px;
+  letter-spacing: 1px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shrik .fa-heart {
+  font-size: 25px;
+  margin-right: 40px;
 }
 
 img {
@@ -34,23 +57,27 @@ img {
 
 button {
   display: block;
+  width: 45%;
   margin: 30px auto auto auto;
   font-size: 14px;
   padding: 15px 20px;
   border: none;
   border-radius: 40px;
   color: #fff;
-  background: #ff79da;
   background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
-  font-weight: 500;
+  font-weight: 700;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 /*start para*/
+header span {
+  display: none;
+}
+
 .para {
   display: flex;
   justify-content: center;
-  background-color: #E8E7E7;
+  background-color: #f5f5f5;
   height: 50px;
   align-items: center;
   box-shadow: 1px 4px 5px 0px inset #b4b4b4;
@@ -149,8 +176,9 @@ button {
 
 .main section {
   padding-top: 40px;
+  padding-bottom: 40px;
   margin-top: 40px;
-  background-color: #E8E7E7;
+  background-color: #f5f5f5;
 }
 
 .main section h2 {
@@ -160,16 +188,50 @@ button {
 }
 
 .main section .card {
-  margin: 0 20px;
+  margin: 20px 20px;
+  border-radius: 20px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
-.main section .card .cardImage {
-  display: flex;
-  flex-direction: row;
+.main section .card::after {
+  content: "Nouveau";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 14px;
+  background-color: #99e2d0;
+  font-weight: 700;
+  color: #2a7059ee;
+  border-radius: 3px;
 }
 
 .main section .card .cardImage img {
-  width: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.main section .card .cardText {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+
+.main section .card .cardText .location {
+  padding-bottom: 20px;
+}
+
+.main section .card .cardText span {
+  font-size: 25px;
+  padding-right: 10px;
+}
+
+.main section .card .cardText span .fa-heart:hover {
+  font-weight: 900;
+  cursor: pointer;
+  color: #9356dc;
 }
 
 /*end main*/

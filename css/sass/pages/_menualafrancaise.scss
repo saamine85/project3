@@ -1,0 +1,55 @@
+// .hero {
+//   img{
+//     width: 100%;
+//     object-fit: cover;
+//   }
+// }
+section {
+  padding-bottom: 40px;
+  .cardMenu {
+    h2 {
+      margin-left: 20px;
+      font-size: 18px;
+      font-weight: normal;
+      text-transform: uppercase;
+      border-bottom: 3px solid $TertiaryColor;
+      padding-top: 30px;
+      margin-bottom: 10px;
+      width: 0%;
+      &:hover {
+        width: 10%;
+        cursor: pointer;
+      }
+    }
+    .cardText {
+      margin: 12px 10px;
+      background-color: #fff;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 10px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
+      h3{
+        font-size: 19px;
+        margin-bottom: 5px;
+      }
+      p{
+        font-size: 17px;
+        display: flex;
+        justify-content: space-between;
+        .price{
+          margin-right: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+    // .cardText {
+    //   h3 {
+    //   }
+    //   p {
+    //   }
+    //   span {
+    //   }
+    // }
+  }
+}
