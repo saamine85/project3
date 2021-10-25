@@ -66,9 +66,9 @@ img {
   height: 200px;
 }
 
-button {
+button,
+.command {
   display: block;
-  width: 45%;
   margin: 30px auto auto auto;
   font-size: 14px;
   padding: 15px 20px;
@@ -78,6 +78,10 @@ button {
   background: linear-gradient(175deg, #ff79da 0%, #9356dc 100%);
   font-weight: 700;
   box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.command {
+  width: 45%;
 }
 
 .hero img {
