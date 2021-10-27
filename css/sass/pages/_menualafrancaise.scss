@@ -4,8 +4,18 @@
 //     object-fit: cover;
 //   }
 // }
+
 section {
   padding-bottom: 40px;
+  @include tab {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  @include large-screen {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
   .cardMenu {
     h2 {
       margin-left: 20px;
@@ -17,8 +27,12 @@ section {
       margin-bottom: 10px;
       width: 0%;
       &:hover {
-        width: 10%;
+        width: 50px;
         cursor: pointer;
+        color: $primarycolor;
+      }
+      @include large-screen {
+        text-align: center;
       }
     }
     .cardText {
@@ -29,15 +43,18 @@ section {
       padding-left: 10px;
       border-radius: 15px;
       box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1);
-      h3{
+      @include large-screen {
+        // background-color: rgb(255, 255, 255);
+      }
+      h3 {
         font-size: 19px;
         margin-bottom: 5px;
       }
-      p{
+      p {
         font-size: 17px;
         display: flex;
         justify-content: space-between;
-        .price{
+        .price {
           margin-right: 15px;
           font-weight: bold;
         }

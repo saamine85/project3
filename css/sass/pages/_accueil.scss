@@ -38,6 +38,11 @@
 
 /*start para*/
 header {
+  @include tab {
+    box-shadow: 1px 4px 5px 0px #b4b4b4;
+    padding-bottom: 10px;
+    // width: 100% ;
+  }
   span {
     display: none;
   }
@@ -49,12 +54,27 @@ header {
   height: 50px;
   align-items: center;
   box-shadow: 1px 4px 5px 0px inset #b4b4b4;
+  @include tab {
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    padding-top: 20px;
+    box-shadow: none;
+    width: fit-content;
+    background-color: #fff;
+  }
+  @include laptop {
+    right: 100px;
+  }
   span {
     position: relative;
     right: 35px;
     top: -2px;
     i {
       font-size: 16px;
+      @include laptop {
+        font-size: 24px;
+      }
     }
   }
   p {
@@ -63,21 +83,61 @@ header {
     padding-left: 0px;
     font-size: 16px;
     font-weight: bold;
+    @include laptop {
+      font-size: 24px;
+    }
   }
 }
 .hero {
   background-color: rgb(245, 245, 245);
   padding: 40px;
+  @include tab {
+    padding-bottom: 20px;
+    background: #fff;
+    // background-color: $TertiaryColor;
+  }
+  @include laptop {
+    position: relative;
+    bottom: -200px;
+  }
+  @include large-screen {
+    position: relative;
+    bottom: -150px;
+  }
   h1 {
     margin: 0 auto;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
+    @include tab {
+      // transform: translateX(160px);
+      font-size: 30px;
+    }
+    @include laptop {
+      // transform: translateX(200px);
+    }
+    @include large-screen {
+      // transform: translateX(0%);
+      font-size: 34px;
+    }
   }
   p {
     padding-top: 10px;
     text-align: center;
     color: #818181;
     font-size: 16px;
+    @include tab {
+      // transform: translateX(255px);
+      // width: fit-content;
+      font-size: 16px;
+    }
+    @include laptop {
+      // transform: translateX(400px);
+      font-size: 20px;
+    }
+    @include large-screen {
+      // transform: translateX(80%);
+      font-size: 24px;
+    }
   }
 }
 /*end para*/
@@ -85,8 +145,40 @@ header {
 .main {
   aside {
     margin: 60px 20px;
+    @include tab {
+      position: relative;
+      top: 0px;
+      left: 0px;
+      // display: flex;
+      // justify-content: flex-start;
+      // align-items: center;
+    }
+    @include laptop {
+      top: -280px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 20px;
+    }
+    @include large-screen {
+      top: -300px;
+      justify-content: center;
+    }
     h2 {
-      font-size: 20px;
+      font-size: 24px;
+      @include tab {
+        font-size: 24px;
+        text-align: center;
+      }
+      @include laptop {
+        position: relative;
+        top: 5px;
+      }
+      @include large-screen {
+        position: relative;
+        top: 5px;
+      }
     }
     p {
       // text-align: center;
@@ -102,14 +194,30 @@ header {
       box-shadow: 0px 3px 10px 1px #d4d4d4;
       position: relative;
       counter-increment: increment;
+      @include tab {
+        padding: 20px 20px;
+        background-color: #fff;
+      }
+      @include laptop {
+        padding: 20px 10px;
+        background-color: #fff;
+      }
+      @include large-screen {
+        margin-left: 50px;
+      }
       span {
         margin-right: 20px;
         margin-left: 25px;
+        @include tab {
+          margin-right: 10px;
+          margin-left: 10px;
+        }
         i {
           font-size: 20px;
           color: #9c9c9c;
           &:hover {
             color: $primarycolor;
+            cursor: pointer;
           }
         }
       }
@@ -135,18 +243,53 @@ header {
     padding-bottom: 40px;
     margin-top: 40px;
     background-color: $greyColor;
+
+    @include tab {
+      margin-top: 20px;
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      position: relative;
+      margin-bottom: 40px;
+      &::before {
+        content: "Restaurant";
+        position: absolute;
+        font-size: 24px;
+        margin-left: 30px;
+        top: 0px;
+        font-weight: bold;
+      }
+      @include laptop {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 40px;
+      }
+      @include large-screen {
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 40px;
+      }
+    }
     h2 {
       font-size: 20px;
       margin-left: 20px;
       margin-bottom: 20px;
+      @include tab {
+        font-size: 24px;
+        display: none;
+      }
     }
+
     .card {
       margin: 20px 20px;
       border-radius: 20px 20px;
       background-color: #fff;
       box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.3);
       position: relative;
-      &::after {
+      a {
+        display: block;
+        text-decoration: none;
+        color: black;
+      }
+      &:nth-of-type(-n + 2)::after {
         content: "Nouveau";
         position: absolute;
         top: 12px;
@@ -157,20 +300,22 @@ header {
         color: #2a7059ee;
         border-radius: 3px;
       }
-
       .cardImage {
         img {
           width: 100%;
           object-fit: cover;
           border-radius: 20px 20px 0px 0px;
+          @include tab {
+            // width: 50%;
+          }
         }
       }
       .cardText {
         display: flex;
         justify-content: space-between;
-        margin: 10px 10px;
+        margin: 5px 10px;
         .location {
-          padding-bottom: 20px;
+          padding-bottom: 10px;
           // margin-right: 10px; // display: none;
           // h3 {
           // }

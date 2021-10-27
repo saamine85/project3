@@ -22,4 +22,13 @@ button,
 }
 .command {
   width: 45%;
+  @include large-screen {
+    position: relative;
+    margin: 0px;
+    left:125%;
+    margin-top: 20px;
+    // left: -50%;
+    // right: -50%;
+  }
 }
+

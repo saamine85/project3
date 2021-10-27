@@ -7,7 +7,23 @@
 header {
   margin: 20px auto;
   text-align: center;
-  position: relative;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  header {
+    text-align: left;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 2px 9px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    margin-bottom: 0px;
+  }
 }
 
 header img {
@@ -15,14 +31,46 @@ header img {
   height: 50%;
 }
 
+@media (min-width: 768px) {
+  header img {
+    position: static;
+    margin-left: 30px;
+    width: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  header img {
+    margin-left: 60px;
+  }
+}
+
 header span {
   position: absolute;
   left: 20px;
-  top: 5px;
+  top: 25px;
+}
+
+@media (min-width: 768px) {
+  header span {
+    left: 95%;
+  }
 }
 
 header span .fa-arrow-left {
   font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+  header span .fa-arrow-left {
+    font-size: 27px;
+  }
+}
+
+@media (min-width: 768px) {
+  header span .fa-arrow-left {
+    font-size: 27px;
+  }
 }
 
 .main {
@@ -30,10 +78,18 @@ header span .fa-arrow-left {
   top: -40px;
   margin-bottom: -40px;
   padding-bottom: -10px;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
   padding-top: 20px;
   padding-bottom: 0px;
   border-radius: 40px 40px 0px 0px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    top: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 body {
@@ -45,7 +101,8 @@ ul {
   padding: 0;
 }
 
-.shrik {
+.shrik,
+.note {
   font-family: "Shrikhand", cursive;
   font-size: 25px;
   font-weight: 200px;
@@ -56,9 +113,44 @@ ul {
   align-items: center;
 }
 
-.shrik .fa-heart {
+@media (min-width: 768px) {
+  .shrik,
+  .note {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shrik,
+  .note {
+    top: -134%;
+    right: 5%;
+    font-size: 28px;
+  }
+}
+
+.shrik .fa-heart,
+.note .fa-heart {
   font-size: 25px;
   margin-right: 40px;
+}
+
+@media (min-width: 1200px) {
+  .shrik .fa-heart,
+  .note .fa-heart {
+    font-size: 27px;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .note {
+    position: absolute;
+    top: -60%;
+    right: 5%;
+    font-size: 28px;
+    padding-top: 20px;
+  }
 }
 
 img {
@@ -84,14 +176,48 @@ button,
   width: 45%;
 }
 
+@media (min-width: 1200px) {
+  .command {
+    position: relative;
+    margin: 0px;
+    left: 125%;
+    margin-top: 20px;
+  }
+}
+
 .hero img {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .hero img {
+    height: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    filter: brightness(0.4);
+    box-shadow: 0px 5px 4px 3px #d4d4d4;
+  }
+}
+
 section {
   padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 section .cardMenu h2 {
@@ -106,8 +232,15 @@ section .cardMenu h2 {
 }
 
 section .cardMenu h2:hover {
-  width: 10%;
+  width: 50px;
   cursor: pointer;
+  color: #9356dc;
+}
+
+@media (min-width: 1200px) {
+  section .cardMenu h2 {
+    text-align: center;
+  }
 }
 
 section .cardMenu .cardText {
@@ -141,19 +274,54 @@ footer {
   padding-bottom: 25px;
 }
 
+@media (min-width: 768px) {
+  footer {
+    padding-top: 50px;
+  }
+}
+
 footer img {
   filter: invert(1);
   padding: 0;
   margin-left: 20px;
   padding-top: 20px;
   margin-bottom: 5px;
-  width: 25%;
+  width: 100px;
   height: 25%;
+}
+
+@media (min-width: 768px) {
+  footer img {
+    padding-top: 0px;
+    margin-left: 35%;
+    width: 250px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer img {
+    margin-left: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
 }
 
 footer ul li {
   margin-left: 20px;
   padding-bottom: 5px;
+}
+
+@media (min-width: 992px) {
+  footer ul li {
+    margin-left: 20px;
+    padding-bottom: 40px;
+  }
 }
 
 footer ul li i {
@@ -164,10 +332,37 @@ footer ul li i {
   margin-right: 15px;
 }
 
+@media (min-width: 768px) {
+  footer ul li i {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer ul li i {
+    margin-right: 30px;
+    font-size: 26px;
+  }
+}
+
 footer ul li a {
   padding-left: 0px;
   color: #fff;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  footer ul li a {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer ul li a {
+    font-size: 26px;
+  }
 }
 
 footer ul li a:hover {

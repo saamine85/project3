@@ -5,7 +5,8 @@ ul {
   list-style: none;
   padding: 0;
 }
-.shrik {
+.shrik,
+.note {
   font-family: "Shrikhand", cursive;
   font-size: 25px;
   font-weight: 200px;
@@ -14,11 +15,30 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include tab {
+    font-size: 28px;
+  }
+  @include large-screen {
+    top: -134%;
+    right: 5%;
+    font-size: 28px;
+  }
   .fa-heart {
     font-size: 25px;
     margin-right: 40px;
+    @include large-screen {
+      font-size: 27px;
+      padding-left: 20px;
+    }
   }
 }
-// .main {
-//   margin: 10px;
-// }
+
+.note {
+  @include large-screen {
+    position: absolute;
+    top: -60%;
+    right: 5%;
+    font-size: 28px;
+    padding-top: 20px;
+  }
+}
